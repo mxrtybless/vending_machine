@@ -1,0 +1,56 @@
+git clone <your_fork_url>
+Клонирует ваш fork на компьютер.
+
+git checkout -b home_work_25
+Создает новую ветку home_work_25 и сразу переключает на нее.
+
+git status
+Показывает, какие файлы были изменены.
+
+git add src/payment/MoneyAcceptor.java
+Добавляет интерфейс деньгоприемника в индекс.
+
+git add src/payment/CoinAcceptor.java
+Добавляет новую реализацию монетоприемника в индекс.
+
+git add src/payment/BillAcceptor.java
+Добавляет новый купюроприемник в индекс.
+
+git commit -m "Extract common money acceptor interface"
+Фиксирует общий интерфейс для платежных компонентов.
+
+git add src/AppRunner.java
+Добавляет изменения автомата для работы через интерфейс деньгоприемника.
+
+git commit -m "Refactor vending machine to use money acceptors"
+Фиксирует обновленную логику автомата.
+
+git add src/payment/BillAcceptor.java src/AppRunner.java
+Обновляет код, добавляя поддержку приемника купюр.
+
+git commit -m "Add bill acceptor support"
+Фиксирует добавление приемника купюр.
+
+git add commands.txt
+Добавляет файл со списком git-команд.
+
+git commit -m "Add homework command log"
+Фиксирует commands.txt.
+
+git add .
+Добавляет оставшиеся финальные правки.
+
+git commit -m "Polish money input flow"
+Фиксирует финальную полировку решения.
+
+git push -u origin home_work_25
+Отправляет ветку home_work_25 в ваш fork на GitHub.
+
+git checkout master
+Переключает на ветку master.
+
+git merge home_work_25
+Вливает изменения из home_work_25 в master.
+
+git push origin master
+Отправляет ветку master на GitHub.
